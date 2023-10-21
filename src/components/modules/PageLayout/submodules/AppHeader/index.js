@@ -11,7 +11,7 @@ import Container from '@mui/material/Container';
 // import MenuItem from '@mui/material/MenuItem';
 import { Link } from '@mui/material';
 import '../../../../../index.css';
-import NavBtn from '../../../../elements/Button';
+import Btn from '../../../../elements/Button';
 
 // const pages = ['Home', 'Demo', 'FAQs', 'About Us', 'Contact Us'];
 
@@ -29,7 +29,7 @@ function NavBar() {
           <Link sx={navBtn} href="/">Contact Us</Link>
       </Box>
       <Box sx={getStartedBtnContainer}>
-        <NavBtn label='Get Started'/>
+        <Btn label='Get Started'/>
       </Box>
     </Container>
   );
