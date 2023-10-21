@@ -3,6 +3,7 @@
   --secondary-blue: #6FE1FF;
   --background-color: #EDF6FF;
   --text-color: #2A2A2B;
+  --inactive-text-color: #8B8B8B;
 }
 
 @font-face {
@@ -24,7 +25,8 @@ body {
   background-color: var(--background-color);
   margin: 0;
   font-family: NatsReg, sans-serif;
-  font-size: "25px";
+  font-size: 25px;
+  color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
