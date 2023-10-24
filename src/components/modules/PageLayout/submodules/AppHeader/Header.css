@@ -1,0 +1,34 @@
+.container {
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     padding: 4% 0
+}
+
+.logo {
+     color: var(--primary-blue);
+     text-decoration: none;
+     list-style: none;
+     font-weight: 600;
+}
+
+.navBarContainer {
+     width: 70%;
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+}
+
+.navBtn {
+     list-style: none;
+     text-decoration: none;
+     color: var(--inactive-text-color);
+     margin: 0 4%;
+}
+
+.getStartedBtnContainer {
+     width: 16%;
+     text-align: right;
+}

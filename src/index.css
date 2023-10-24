@@ -29,9 +29,39 @@ body {
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1, h2 {
+  font-family: LexendPetaBold;
+  letter-spacing: -5px;
+  text-align: center;
+}
+
+span {
+  color: var(--primary-blue);
+}
+
+p {
+  line-height: 1.2;
+}
+
+.description {
+  font-family: LexendPetaLight;
+  letter-spacing: -2px;
+  font-size: 70%;
+  text-align: center;
+  margin: -10px 0px 60px 0px;
+}
+
+.bold {
+  color: var(--primary-blue);
 }
