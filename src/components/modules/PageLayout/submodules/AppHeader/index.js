@@ -10,13 +10,13 @@ function NavBar() {
   return (
       <div className='container'>
         <div className='logoContainer'>
-            <li className='logo' href="/">enstant.com</li>
+            <a className='logo' href="/">enstant.com</a>
         </div>
         <div className='navBarContainer'>
-            <li className='navBtn' href="/">Home</li>
-            <li className='navBtn' href="/">Demo</li>
-            <li className='navBtn' href="/">About Us</li>
-            <li className='navBtn' href="/">Contact Us</li>
+            <a className='navBtn' href="/">Home</a>
+            <a className='navBtn' href="/">Demo</a>
+            <a className='navBtn' href="/">About Us</a>
+            <a className='navBtn' href="/">Contact Us</a>
         </div>
         <div className='getStartedBtnContainer'>
           <Btn label='Get Started'/>
