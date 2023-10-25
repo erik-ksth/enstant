@@ -6,6 +6,9 @@ import HeroSection from '../components/modules/HomePage/HeroSection'
 import WhatDoYouWant from '../components/modules/HomePage/WhatDoYouWantSection'
 import WhatCanWeDo from '../components/modules/HomePage/WhatCanWeDoSession'
 import AreWeRight from '../components/modules/HomePage/AreWeRightSession';
+import ClientsLogos from '../components/modules/HomePage/ClientsLogos';
+import AppFooter from '../components/modules/PageLayout/submodules/AppFooter';
+import RemindingFooter from '../components/modules/PageLayout/submodules/RemindingFooter';
 
 function Home() {
   return (
@@ -15,6 +18,9 @@ function Home() {
           <WhatDoYouWant/>
           <WhatCanWeDo/>
           <AreWeRight/>
+          <ClientsLogos/>
+          <RemindingFooter/>
+          <AppFooter/>
      </body>
   );
 }
