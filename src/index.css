@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --primary-blue: #277FD0;
   --secondary-blue: #6FE1FF;
@@ -42,8 +46,16 @@ code {
 
 h1, h2 {
   font-family: LexendPetaBold;
-  letter-spacing: -5px;
+  letter-spacing: -6px;
   text-align: center;
+}
+
+h1 {
+  font-size: 200%;
+}
+
+h2 {
+  font-size: 150%;
 }
 
 span {
@@ -60,7 +72,7 @@ p {
   letter-spacing: -2px;
   font-size: 70%;
   text-align: center;
-  margin: -10px 0px 60px 0px;
+  margin: 20px 0px 60px 0px;
 }
 
 .bold {

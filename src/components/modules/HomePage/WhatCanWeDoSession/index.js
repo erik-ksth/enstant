@@ -91,4 +91,5 @@ const list = {
   flexDirection: "row",
   alignItems: "center",
   columnGap: "2%",
+  margin: '50px 0'
 };

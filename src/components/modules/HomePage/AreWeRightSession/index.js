@@ -8,7 +8,6 @@ function AreWeRight() {
       </h2>
 
       <div style={bodyParaContainer}>
-
         <p>
           enstant.com is ideal for you if your company or organization orders
           business cards <span>frequently.</span>
@@ -26,9 +25,6 @@ function AreWeRight() {
           providing your staff with the basic, yet important
           <span> sales tool </span>- the business card.
         </p>
-
-        <img style={topQuote} src="/images/icons/quote_icon.svg"></img>
-        <img style={buttomQuote} src="/images/icons/quote_icon.svg"></img>
       </div>
     </div>
   );
@@ -37,25 +33,14 @@ function AreWeRight() {
 export default AreWeRight;
 
 const parentContainer = {
-    padding: '3% 0',
-    backgroundColor: 'white',
-    overflow: 'hidden',
-}
+  padding: "3% 0",
+  backgroundColor: "white",
+  overflow: "hidden",
+};
 
 const bodyParaContainer = {
-    padding: '0.5% 10%',
-    marginBottom: '-10%'
-}
-
-const topQuote = {
-    position: 'relative',
-    top: '-470px',
-    left: '-12%',
-}
-
-const buttomQuote = {
-    position: 'relative',
-    bottom: '50px',
-    right: '-73%',
-    transform: 'rotate(180deg)'
-}
+  padding: "3% 10%",
+  display: "flex",
+  flexDirection: "column",
+  rowGap: "30px",
+};

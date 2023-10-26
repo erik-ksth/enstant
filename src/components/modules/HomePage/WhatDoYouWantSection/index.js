@@ -15,37 +15,37 @@ function WhatDoYouWant() {
 
       <ul style={listContainer}>
         <li style={list}>
-          <img style={icon} src="/images/icons/shipping_icon.svg"></img>
+          <img src="/images/icons/shipping_icon.svg"></img>
           <p style={{ textAlign: "center" }}>
             Corporate business cards <span>shipped within 3 days?</span>
           </p>
         </li>
         <li style={list}>
-          <img style={icon} src="/images/icons/bag_icon.svg"></img>
+          <img src="/images/icons/bag_icon.svg"></img>
           <p style={{ textAlign: "center" }}>
             Place each order in <span>less than 30 seconds!</span>
           </p>
         </li>
         <li style={list}>
-          <img style={icon} src="/images/icons/checked_icon.svg"></img>
+          <img src="/images/icons/checked_icon.svg"></img>
           <p style={{ textAlign: "center" }}>
             Printed <span>correctly</span> in the first time?
           </p>
         </li>
         <li style={list}>
-          <img style={icon} src="/images/icons/status_icon.svg"></img>
+          <img src="/images/icons/status_icon.svg"></img>
           <p style={{ textAlign: "center" }}>
             <span>Informed</span> about the status of your order?
           </p>
         </li>
         <li style={list}>
-          <img style={icon} src="/images/icons/happy_icon.svg"></img>
+          <img src="/images/icons/happy_icon.svg"></img>
           <p style={{ textAlign: "center" }}>
             Color and quality to be <span>consistent</span> every time?
           </p>
         </li>
         <li style={list}>
-          <img style={icon} src="/images/icons/earth_icon.svg"></img>
+          <img src="/images/icons/earth_icon.svg"></img>
           <p style={{ textAlign: "center" }}>
             Distributed to <span>domestic and international</span> locations?
           </p>
@@ -64,6 +64,7 @@ const listContainer = {
   justifyContent: "space-evenly",
   rowGap: "50px",
   columnGap: "4%",
+  margin: '0 0 100px 0'
 };
 
 const list = {
@@ -73,8 +74,4 @@ const list = {
   width: "25%",
   alignItems: "center",
   textAlign: "center",
-};
-
-const icon = {
-  marginBottom: "-40px",
 };
