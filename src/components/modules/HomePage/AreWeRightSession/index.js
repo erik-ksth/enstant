@@ -7,7 +7,7 @@ function AreWeRight() {
         Are we <span>Right</span> for your business?
       </h2>
 
-      <div style={bodyParaContainer}>
+      <div style={bodyParaContainer} >
         <p>
           enstant.com is ideal for you if your company or organization orders
           business cards <span>frequently.</span>

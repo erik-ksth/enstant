@@ -19,7 +19,7 @@ function HeroSection() {
           <b>Web Portal.</b>
         </span>
       </p>
-      <Btn label="View Demo" />
+      <Btn label="View Demo" to="/demo"/>
       <img style={heroImg} src="/images/demo_preview.svg"></img>
     </Container>
   );

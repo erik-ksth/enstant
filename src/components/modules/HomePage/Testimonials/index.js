@@ -52,7 +52,7 @@ function Testimonials() {
   return (
     <div>
       <section>
-        <div class="py-24 w-4/5 mx-auto">
+        <div class="max-w-screen-2xl py-24 w-4/5 mx-auto">
           <h2 className="pb-16 font-bold text-5xl text-gray-800 text-center">
             What Clients <span>Say</span>?
           </h2>
@@ -65,8 +65,8 @@ function Testimonials() {
                         bg-white rounded-lg"
                 >
                   <div
-                    class="w-full flex flex-col bg-white px-9 py-6 
-                  rounded-2xl "
+                    class="w-full flex flex-col h-full px-9 py-6 
+                  rounded-2xl justify-between"
                   >
                     <p class="pt-2 text-slate-600 leading-7">
                       {testimonialMetadata.testimonial}
