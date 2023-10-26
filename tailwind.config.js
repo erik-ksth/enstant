@@ -11,7 +11,7 @@ module.exports = {
         backgroundColor: '#EDF6FF',
         textColor: '#2A2A2B',
         inactiveTextColor: '#8B8B8B',
-      }
+      },
     },
   },
   plugins: [],

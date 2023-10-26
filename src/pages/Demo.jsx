@@ -2,14 +2,16 @@
 import '../index.css';
 import Navbar from '../components/modules/PageLayout/submodules/AppHeader/index'
 import AppFooter from '../components/modules/PageLayout/submodules/AppFooter';
-import RemindingFooter from '../components/modules/PageLayout/submodules/RemindingFooter';
+import PageTitle from '../components/modules/PageLayout/submodules/PageTitle';
+import WelcomeDemo from '../components/modules/DemoPage/Welcome';
 
 
 function Demo() {
   return (
      <body>
           <Navbar/>
-          Demo
+          <PageTitle pageName="Demo" description="Experience a quick interactive demo!"/>
+          <WelcomeDemo/>
           <AppFooter/>
      </body>
   );
