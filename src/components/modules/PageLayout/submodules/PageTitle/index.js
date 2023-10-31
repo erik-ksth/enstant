@@ -9,7 +9,7 @@ function PageTitle(props) {
                     <h1 class="absolute uppercase inset-0 top-3 z-10">{props.pageName}</h1>
                     <h1 class="text-blue-100 absolute text-8xl uppercase inset-0 z-0">{props.pageName}</h1>
                 </div>
-                <p className="description" class="text-primaryBlue text-center">{props.description}</p>
+                <p class="text-center font-lexendPetaLight text-base tracking-tighter">{props.description}</p>
             </div>
         </>
     )

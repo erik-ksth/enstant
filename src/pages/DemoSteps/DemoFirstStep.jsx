@@ -3,14 +3,14 @@ import '../../index.css';
 import Navbar from '../../components/modules/PageLayout/submodules/AppHeader/index'
 import AppFooter from '../../components/modules/PageLayout/submodules/AppFooter';
 import PageTitle from '../../components/modules/PageLayout/submodules/PageTitle';
-
+import DemoSubTitle from '../../components/modules/DemoPage/DemoSubTitle';
 
 function DemoFirstStep() {
   return (
      <body>
           <Navbar/>
           <PageTitle pageName="Demo" description="Experience a quick interactive demo!"/>
-          Step 1
+          <DemoSubTitle/>
           <AppFooter/>
      </body>
   );

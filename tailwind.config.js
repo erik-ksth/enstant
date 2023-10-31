@@ -12,6 +12,10 @@ module.exports = {
         textColor: '#2A2A2B',
         inactiveTextColor: '#8B8B8B',
       },
+      fontFamily: {
+        nats: ["natsReg"],
+        lexendPetaLight: ["LexendPetaLight"]
+      }
     },
   },
   plugins: [],

@@ -4,9 +4,9 @@ import Btn from "../../../elements/Button";
 function WelcomeDemo() {
   return (
     <div class="flex flex-col justify-center gap-y-8 p-20">
-      <h2>
+      <h3>
         Welcome to the <span>Demo</span>!
-      </h2>
+      </h3>
       <p class="text-center leading-10">
         In this quick interactive demo,
         <br />
