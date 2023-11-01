@@ -40,6 +40,7 @@ function FAQs() {
                   managing and tracking corporate business cards online.
                 </Typography>
               </AccordionDetails>
+
             </Accordion>
             <Accordion style={faqsBox}>
               <AccordionSummary

@@ -1,13 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepButton from "@mui/material/StepButton";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-
 import Congratulation from "../Congratulation";
 import DemoStep1 from "../DemoStep1";
+import DemoStep2 from "../DemoStep2";
 
 const steps = [
   "Enter name to order or search for previous order",
@@ -18,6 +18,7 @@ const steps = [
 function DemoSubTitle() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [completed, setCompleted] = React.useState({});
+  const [name, setName] = useState('');
 
   const totalSteps = () => {
     return steps.length;
@@ -60,9 +61,10 @@ function DemoSubTitle() {
     handleNext();
   };
 
-  const handleReset = () => {
-    setActiveStep(0);
-    setCompleted({});
+  // Callback function to handle data received from the child component
+  const handleCallBack = inputName => {
+    // Update the name in the component's state
+    setName(inputName);
   };
 
   return (
@@ -107,9 +109,9 @@ function DemoSubTitle() {
               {(() => {
                 switch (activeStep) {
                   case 0:
-                    return <DemoStep1/>;
+                    return <DemoStep1 parentCallback={handleCallBack} />;
                   case 1:
-                    return <p>step 1</p>;
+                    return <DemoStep2 name={name}/>;
                   case 2:
                     return <p>step 1</p>;
                   case 3:
