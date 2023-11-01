@@ -3,7 +3,7 @@ import React from "react";
 function Welcome() {
   return (
     <>
-      <div class="w-9/12 max-w-screen-lg">
+      <div class="w-10/12 max-w-screen-xl">
         <h3 class="text-left mt-10">
           Welcome to <span>enstant!</span>
         </h3>

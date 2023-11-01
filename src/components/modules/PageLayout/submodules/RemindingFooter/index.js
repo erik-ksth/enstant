@@ -11,7 +11,7 @@ function RemindingFooter() {
             <br />
             <span>Start Ordering</span>?
           </h2>
-          <p>
+          <p class="py-5">
             Register and get your own company portal for <span>free</span>!
             <br />
             No payment is required to open an account.
@@ -25,7 +25,7 @@ function RemindingFooter() {
               <br />
               how it works?
             </h2>
-            <p>Experience a quick interactive demo!</p>
+            <p class="py-5">Experience a quick interactive demo!</p>
           </div>
           <Button label={"View Demo"} />
         </div>

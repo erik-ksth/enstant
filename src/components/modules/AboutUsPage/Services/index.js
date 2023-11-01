@@ -5,11 +5,11 @@ function Services() {
   return (
     <>
       <div class="flex items-center mt-20">
-        <div class="w-1/2">
+        <div class="w-10/12 max-w-screen-xl">
           <img src="./images/demo_preview_small.svg"></img>
         </div>
         <div class="z-50 w-auto flex flex-col items-start -ml-60">
-          <h3>
+          <h3 class="text-left">
             <span>Our Online Tool and Web Portal...</span>
           </h3>
           <div style={descriptionBox}>
