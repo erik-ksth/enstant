@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import Congratulation from "../Congratulation";
 import DemoStep1 from "../DemoStep1";
 import DemoStep2 from "../DemoStep2";
+import DemoStep3 from "../DemoStep3";
 
 const steps = [
   "Enter name to order or search for previous order",
@@ -18,7 +19,7 @@ const steps = [
 function DemoSubTitle() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [completed, setCompleted] = React.useState({});
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
 
   const totalSteps = () => {
     return steps.length;
@@ -50,10 +51,6 @@ function DemoSubTitle() {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const handleStep = (step) => () => {
-    setActiveStep(step);
-  };
-
   const handleComplete = () => {
     const newCompleted = completed;
     newCompleted[activeStep] = true;
@@ -62,7 +59,7 @@ function DemoSubTitle() {
   };
 
   // Callback function to handle data received from the child component
-  const handleCallBack = inputName => {
+  const handleCallBack = (inputName) => {
     // Update the name in the component's state
     setName(inputName);
   };
@@ -84,8 +81,8 @@ function DemoSubTitle() {
         <Stepper alternativeLabel nonLinear activeStep={activeStep}>
           {steps.map((label, index) => (
             <Step key={label} completed={completed[index]}>
-              <StepButton color="inherit" onClick={handleStep(index)}>
-                <div class="text-primaryBlue text-xl font-nats">{label}</div>
+              <StepButton color="inherit">
+                <div class="text-primaryBlue text-2xl font-nats">{label}</div>
               </StepButton>
             </Step>
           ))}
@@ -94,7 +91,7 @@ function DemoSubTitle() {
           {allStepsCompleted() ? (
             <React.Fragment>
               <Typography sx={{ mt: 10, mb: 1 }}>
-                <Congratulation />
+                <Congratulation name={name}/>
               </Typography>
               <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
                 <Box sx={{ flex: "1 1 auto" }} />
@@ -111,11 +108,9 @@ function DemoSubTitle() {
                   case 0:
                     return <DemoStep1 parentCallback={handleCallBack} />;
                   case 1:
-                    return <DemoStep2 name={name}/>;
+                    return <DemoStep2 name={name} />;
                   case 2:
-                    return <p>step 1</p>;
-                  case 3:
-                    return <p>step 1</p>;
+                    return <DemoStep3 />;
                   default:
                     return null;
                 }
@@ -125,12 +120,28 @@ function DemoSubTitle() {
                   color="inherit"
                   disabled={activeStep <= 1}
                   onClick={handleBack}
-                  sx={{ mr: 1, display: activeStep <= 1 ? "none" : "block" }}
+                  sx={{backgroundColor: `white`,
+                  textTransform: "none",
+                  fontFamily: `NatsReg`,
+                  boxShadow: '0px 5px 7px #00000030',
+                  color: 'var(--primary-blue)',
+                  fontSize: "20px",
+                  padding: "5px 25px", mr: 1, display: activeStep <= 1 ? "none" : "block" }}
                 >
                   Back
                 </Button>
                 <Box sx={{ flex: "1 1 auto" }} />
-                <Button onClick={handleComplete}>
+                <Button
+                  sx={{
+                    backgroundColor: `var(--primary-blue)`,
+                    textTransform: "none",
+                    fontFamily: `NatsReg`,
+                    fontSize: "20px",
+                    padding: "5px 25px",
+                  }}
+                  variant="contained"
+                  onClick={handleComplete}
+                >
                   {activeStep === totalSteps() - 1 ? "Submit" : "Continue"}
                 </Button>
               </Box>

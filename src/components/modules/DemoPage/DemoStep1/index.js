@@ -19,7 +19,7 @@ function DemoStep1({ parentCallback }) {
       <input
         value={inputValue}
         onChange={handleInputChange}
-        class="border rounded-sm ml-10 w-1/3."
+        class="border rounded-sm ml-10 w-1/3 px-2"
         type="text"
         name="myname"
       ></input>

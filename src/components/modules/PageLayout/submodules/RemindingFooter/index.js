@@ -27,7 +27,7 @@ function RemindingFooter() {
             </h2>
             <p class="py-5">Experience a quick interactive demo!</p>
           </div>
-          <Button label={"View Demo"} />
+          <Button label={"View Demo"} to="/demo"/>
         </div>
       </div>
     </div>
@@ -48,13 +48,14 @@ const childContainer = {
   display: "flex",
   flexWrap: "wrap",
   width: '100%',
-  maxWidth: "1200px",
+  maxWidth: "1500px",
 };
 
 const firstColumn = {
   width: "49%",
   height: "100%",
   borderRight: "1px solid var(--text-color)",
+  paddingRight: '5%',
 };
 
 const secondColumn = {

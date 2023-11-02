@@ -10,8 +10,8 @@ import Home from "./pages/Home";
 import Demo from "./pages/Demo"
 import About from "./pages/About";
 import ContactUs from "./pages/ContactUs";
-
-import DemoFirstStep from './pages/DemoSteps/DemoFirstStep'
+import GetStarted from "./pages/GetStarted";
+import StartDemo from './pages/DemoSteps/StartDemo'
 
 function App() {
   return (
@@ -22,8 +22,8 @@ function App() {
           <Route path="/demo" element={<Demo/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/contactus" element={<ContactUs/>}/>
-
-          <Route path="/demostep1" element={<DemoFirstStep/>}/>
+          <Route path="/startDemo" element={<StartDemo/>}/>
+          <Route path="/getStarted" element={<GetStarted/>}/>
         </Routes>
       </Router>
     </>

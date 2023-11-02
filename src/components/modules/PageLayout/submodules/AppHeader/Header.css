@@ -28,6 +28,11 @@
      margin: 0 4%;
 }
 
+.navBtn:hover,
+.navBtn.active-tab {
+     color: var(--text-color);
+}
+
 .getStartedBtnContainer {
      width: 16%;
      text-align: right;

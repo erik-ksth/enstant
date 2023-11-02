@@ -18,7 +18,7 @@ function WelcomeDemo() {
         your company portal using our service.
       </p>
       <div class="flex justify-center">
-        <Btn label="Start Demo" to="/demostep1"></Btn>
+        <Btn label="Start Demo" to="/startDemo"></Btn>
       </div>
     </div>
   );

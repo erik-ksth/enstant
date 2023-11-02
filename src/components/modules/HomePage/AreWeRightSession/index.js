@@ -35,7 +35,10 @@ export default AreWeRight;
 const parentContainer = {
   padding: "3% 0",
   backgroundColor: "white",
-  overflow: "hidden",
+  width: '100vw',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
 };
 
 const bodyParaContainer = {
@@ -43,4 +46,5 @@ const bodyParaContainer = {
   display: "flex",
   flexDirection: "column",
   rowGap: "30px",
+  maxWidth: '1800px'
 };

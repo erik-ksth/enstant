@@ -12,10 +12,10 @@ function AppFooter() {
 
             <div className='footerNavBarContainer'>
                 <a className='footerNavBtn' href="/">Home</a>
-                <a className='footerNavBtn' href="/">Demo</a>
-                <a className='footerNavBtn' href="/">FAQs</a>
-                <a className='footerNavBtn' href="/">About Us</a>
-                <a className='footerNavBtn' href="/">Contact Us</a>
+                <a className='footerNavBtn' href="/demo">Demo</a>
+                <a className='footerNavBtn' href="/about">FAQs</a>
+                <a className='footerNavBtn' href="/about">About Us</a>
+                <a className='footerNavBtn' href="/contactUs">Contact Us</a>
             </div>
         </div>
     )
