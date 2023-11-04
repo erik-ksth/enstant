@@ -2,7 +2,7 @@ import React from "react";
 
 function Description() {
   return (
-    <div style={{ width: "1500px" }}>
+    <div style={{ maxWidth: "1500px" }}>
       <p className="description" style={{ lineHeight: "35px" }}>
         Please fill up the form to receive additional information
         <br />

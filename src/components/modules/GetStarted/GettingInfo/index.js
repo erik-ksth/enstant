@@ -1,11 +1,14 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Stepper from "@mui/material/Stepper";
-import Step from "@mui/material/Step";
-import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Step1 from "../Step1";
+import Step2 from "../Step2";
+import Step3 from "../Step3";
+import Step4 from "../Step4";
+import Step5 from "../Step5";
+import Step6 from "../Step6";
 
 const theme = createTheme({
   typography: {
@@ -27,7 +30,7 @@ export default function GettingInfo() {
   const [skipped, setSkipped] = React.useState(new Set());
 
   const isStepOptional = (step) => {
-    return step === 1;
+    return step === 1 || step === 2 || step === 3;
   };
 
   const isStepSkipped = (step) => {
@@ -64,67 +67,74 @@ export default function GettingInfo() {
     });
   };
 
-  const handleReset = () => {
-    setActiveStep(0);
-  };
-
   return (
     <ThemeProvider sx={{ maxWidth: "1500px" }} theme={theme}>
-      
-      {activeStep === steps.length ? (
-        <React.Fragment>
-          <Typography sx={{ mt: 2, mb: 1 }}>
-            All steps completed - you&apos;re finished
-          </Typography>
-          <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
-            <Box sx={{ flex: "1 1 auto" }} />
-            <Button onClick={handleReset}>Reset</Button>
-          </Box>
-        </React.Fragment>
-      ) : (
-        <React.Fragment>
-          <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography>
-          <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
-            <Button
-              color="inherit"
-              disabled={activeStep === 0}
-              onClick={handleBack}
-              variant="contained"
-              sx={{
-                backgroundColor: `white`,
-                textTransform: "none",
-                fontFamily: `NatsReg`,
-                boxShadow: "0px 5px 7px #00000030",
-                color: "var(--primary-blue)",
-                fontSize: "20px",
-                padding: "5px 25px",
-                mr: 1,
-                display: activeStep <= 0 ? "none" : "block",
-              }}
-            >
-              BACK
-            </Button>
-            <Box sx={{ flex: "1 1 auto" }} />
-            {isStepOptional(activeStep) && (
+      <div style={{ paddingBottom: "50px" }}>
+        {activeStep === steps.length ? (
+          <React.Fragment>
+            <Step6/>
+          </React.Fragment>
+        ) : (
+          <React.Fragment>
+            <Typography sx={{ mt: 2, mb: 1 }}>
+            {(() => {
+                  switch (activeStep) {
+                    case 0:
+                      return <Step1/>;
+                    case 1:
+                      return <Step2/>;
+                    case 2:
+                      return <Step3/>;
+                    case 3:
+                      return <Step4/>;
+                    case 4:
+                      return <Step5/>;
+                    default:
+                      return null;
+                  }
+                })()}
+            </Typography>
+            <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
               <Button
                 color="inherit"
-                onClick={handleSkip}
-                sx={{ mr: 1, fontSize: "20px" }}
+                disabled={activeStep === 0}
+                onClick={handleBack}
+                variant="contained"
+                sx={{
+                  backgroundColor: `white`,
+                  textTransform: "none",
+                  fontFamily: `NatsReg`,
+                  boxShadow: "0px 5px 7px #00000030",
+                  color: "var(--primary-blue)",
+                  fontSize: "20px",
+                  padding: "5px 25px",
+                  mr: 1,
+                }}
               >
-                Skip
+                BACK
               </Button>
-            )}
+              <Box sx={{ flex: "1 1 auto" }} />
+              {isStepOptional(activeStep) && (
+                <Button
+                  color="inherit"
+                  onClick={handleSkip}
+                  sx={{ mr: 1, fontSize: "20px" }}
+                >
+                  Skip
+                </Button>
+              )}
 
-            <Button
-              variant="contained"
-              onClick={handleNext}
-              sx={{ fontSize: "20px " }}
-            >
-              {activeStep === steps.length - 1 ? "Finish" : "Continue"}
-            </Button>
-          </Box>
-        </React.Fragment>
-      )}
+              <Button
+                variant="contained"
+                onClick={handleNext}
+                sx={{ fontSize: "20px " }}
+              >
+                {activeStep === steps.length - 1 ? "Submit" : "Continue"}
+              </Button>
+            </Box>
+          </React.Fragment>
+        )}
+      </div>
     </ThemeProvider>
   );
 }

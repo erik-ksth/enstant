@@ -1,0 +1,71 @@
+.inputContainer {
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+li {
+    list-style: decimal;
+}
+
+.inputContainer > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.inputContainer > div > p {
+    text-align: center;
+}
+
+.inputRow {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10%;
+}
+
+.inputRow > div > input, select,
+.radioInput > input {
+    border: 1px solid #00000030;
+    height: 35px;
+    padding: 0 10px;
+    border-radius: 3px;
+}
+
+.leftCol {
+    width: 30%;
+    text-align: right;
+}
+
+.rightCol {
+    width: 70%;
+}
+
+.rightCol > input {
+    width: 100%;
+}
+
+.radioInputContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 50px;
+    row-gap: 20px;
+}
+
+.radioInput {
+    display: flex;
+    column-gap: 10px;
+}
+
+.radioInput > input {
+    width: 25px;
+    cursor: pointer;
+}
+
+textarea {
+    width: 100%;
+    border: solid 1px #00000030;
+    border-radius: 5px;
+}

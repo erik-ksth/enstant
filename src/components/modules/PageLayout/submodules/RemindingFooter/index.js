@@ -16,7 +16,7 @@ function RemindingFooter() {
             <br />
             No payment is required to open an account.
           </p>
-          <Button label={"Get Started"} />
+          <Button label={"Get Started"} to="/getStarted"/>
         </div>
         <div style={secondColumn}>
           <div>
