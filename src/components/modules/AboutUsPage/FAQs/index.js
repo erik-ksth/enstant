@@ -17,7 +17,7 @@ function FAQs() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <div class="w-10/12 max-w-screen-xl">
+        <div class="w-10/12 max-w-screen-xl" id="faqs">
           <h3 class="text-left mt-20">
             Frequently Asked Questions (<span>FAQs</span>)
           </h3>

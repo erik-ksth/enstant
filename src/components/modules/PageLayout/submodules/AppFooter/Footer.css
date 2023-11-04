@@ -5,6 +5,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 5% 0;
+    row-gap: 50px;
 }
 
 .footerNavBarContainer {

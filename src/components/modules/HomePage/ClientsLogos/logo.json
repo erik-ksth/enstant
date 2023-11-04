@@ -1,51 +1,51 @@
 [
     {
         "id": "1",
-        "logo": "../../../../../public/images/logos/cisco_logo.svg"
+        "logo": "/images/logos/cisco_logo.svg"
     },
     {
         "id": "2",
-        "logo": "../../../../../public/images/logos/intel_logo.svg"
+        "logo": "/images/logos/intel_logo.svg"
     },
     {
         "id": "3",
-        "logo": "../../../../../public/images/logos/ibm_logo.svg"
+        "logo": "/images/logos/ibm_logo.svg"
     },
     {
         "id": "4",
-        "logo": "../../../../../public/images/logos/symantec_logo.svg"
+        "logo": "/images/logos/symantec_logo.svg"
     },
     {
         "id": "5",
-        "logo": "../../../../../public/images/logos/stanford_logo.svg"
+        "logo": "/images/logos/stanford_logo.svg"
     },
     {
         "id": "6",
-        "logo": "../../../../../public/images/logos/century21_logo.svg"
+        "logo": "/images/logos/century21_logo.svg"
     },
     {
         "id": "7",
-        "logo": "../../../../../public/images/logos/3com_logo.svg"
+        "logo": "/images/logos/3com_logo.svg"
     },
     {
         "id": "8",
-        "logo": "../../../../../public/images/logos/sun_logo.svg"
+        "logo": "/images/logos/sun_logo.svg"
     },
     {
         "id": "9",
-        "logo": "../../../../../public/images/logos/idt_logo.svg"
+        "logo": "/images/logos/idt_logo.svg"
     },
     {
         "id": "10",
-        "logo": "../../../../../public/images/logos/siebel_logo.svg"
+        "logo": "/images/logos/siebel_logo.svg"
     },
     {
         "id": "11",
-        "logo": "../../../../../public/images/logos/oki_logo.svg"
+        "logo": "/images/logos/oki_logo.svg"
     },
     {
         "id": "12",
-        "logo": "../../../../../public/images/logos/applied_materials_logo.svg"
+        "logo": "/images/logos/applied_materials_logo.svg"
     }
 
 ]
