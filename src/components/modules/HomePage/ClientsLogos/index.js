@@ -1,6 +1,5 @@
 import React from "react";
 import "./LogosScrolling.css";
-import { Scrolling } from "../../PageLayout/submodules/Scrolling/Scrolling";
 import logos from "./logo.json";
 
 function ClientsLogos() {

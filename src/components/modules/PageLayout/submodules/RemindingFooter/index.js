@@ -14,7 +14,7 @@ function RemindingFooter() {
           <p class="py-5">
             Register and get your own company portal for <span>free</span>!
             <br />
-            No payment is required to open an account.
+            No payment is required to get started.
           </p>
           <Button label={"Get Started"} to="/getStarted"/>
         </div>

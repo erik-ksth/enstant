@@ -46,10 +46,12 @@ export default function GettingInfo() {
 
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
     setSkipped(newSkipped);
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   };
 
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   };
 
   const handleSkip = () => {
@@ -58,7 +60,7 @@ export default function GettingInfo() {
       // it should never occur unless someone's actively trying to break something.
       throw new Error("You can't skip a step that isn't optional.");
     }
-
+    window.scrollTo({ top: 0, behavior: 'smooth' })
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
     setSkipped((prevSkipped) => {
       const newSkipped = new Set(prevSkipped.values());

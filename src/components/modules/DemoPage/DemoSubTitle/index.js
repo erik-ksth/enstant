@@ -45,9 +45,11 @@ function DemoSubTitle() {
           steps.findIndex((step, i) => !(i in completed))
         : activeStep + 1;
     setActiveStep(newActiveStep);
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   };
 
   const handleBack = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
