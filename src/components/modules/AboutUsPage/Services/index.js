@@ -52,5 +52,5 @@ const descriptionBox = {
   borderRadius: "10px",
   backdropFilter: "blur(10px)",
   margin: "10px",
-  width: "110%",
+  width: "100%",
 };

@@ -14,6 +14,7 @@ function AppFooter() {
                 <a className='footerNavBtn' href="/">Home</a>
                 <a className='footerNavBtn' href="/demo">Demo</a>
                 <a className='footerNavBtn' href="/faqs">FAQs</a>
+                <a className='footerNavBtn' href="/clients">Clients</a>
                 <a className='footerNavBtn' href="/about">About Us</a>
                 <a className='footerNavBtn' href="/contactUs">Contact Us</a>
             </div>

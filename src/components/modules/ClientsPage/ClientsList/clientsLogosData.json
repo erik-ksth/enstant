@@ -1,0 +1,51 @@
+[
+    {
+        "id": "1",
+        "logo": "/images/logos/color/cisco_logo.svg"
+    },
+    {
+        "id": "2",
+        "logo": "/images/logos/color/intel_logo.svg"
+    },
+    {
+        "id": "3",
+        "logo": "/images/logos/color/ibm_logo.svg"
+    },
+    {
+        "id": "4",
+        "logo": "/images/logos/color/symantec_logo.svg"
+    },
+    {
+        "id": "5",
+        "logo": "/images/logos/color/stanford_logo.svg"
+    },
+    {
+        "id": "6",
+        "logo": "/images/logos/color/century21_logo.svg"
+    },
+    {
+        "id": "7",
+        "logo": "/images/logos/color/3com_logo.svg"
+    },
+    {
+        "id": "8",
+        "logo": "/images/logos/color/sun_logo.svg"
+    },
+    {
+        "id": "9",
+        "logo": "/images/logos/color/idt_logo.svg"
+    },
+    {
+        "id": "10",
+        "logo": "/images/logos/color/siebel_logo.svg"
+    },
+    {
+        "id": "11",
+        "logo": "/images/logos/color/oki_logo.svg"
+    },
+    {
+        "id": "12",
+        "logo": "/images/logos/color/applied_materials_logo.svg"
+    }
+
+]

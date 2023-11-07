@@ -1,45 +1,9 @@
 import { ChevronLeft, ChevronRight } from "react-bootstrap-icons";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback } from "react";
+import testimonialData from './testimonialData';
 
 function Testimonials() {
-  let testimonials = [
-    {
-      testimonial:
-        "I'm a huge fan of this app, I've found it to be incredibly intuitive overall. Would definitely recommend this if you're looking for an app to make planning that bit easier.",
-      author: "John Doe",
-      authorImg: "https://source.unsplash.com/v2aKnjMbP_k/500x500",
-      authorMetadata: "Cisco",
-    },
-    {
-      testimonial:
-        "This app has been pivotal for helping our team collaborate on tasks and new plans, I’d definitely recommend this if you’d like an intuitive planner app.",
-      author: "Emma Stone",
-      authorMetadata: "IBM",
-      authorImg: "https://source.unsplash.com/rDEOVtE7vOs/500x500",
-    },
-    {
-      testimonial:
-        "I'm a huge fan of this app, I've found it to be incredibly intuitive overall. Would definitely recommend this if you're looking for an app to make planning that bit easier.",
-      author: "Ben Parker",
-      authorImg: "https://source.unsplash.com/v2aKnjMbP_k/500x500",
-      authorMetadata: "INTEL",
-    },
-    {
-      testimonial:
-        "This app has been pivotal for helping our team collaborate on tasks and new plans, I’d definitely recommend this if you’d like an intuitive planner app.",
-      author: "Mary Janes",
-      authorMetadata: "3com",
-      authorImg: "https://source.unsplash.com/rDEOVtE7vOs/500x500",
-    },
-    {
-      testimonial:
-        "I absolutely love the features provided, and that I can create notes to each task also. It really helped streamline my workflow, I would definitely recommend it!",
-      author: "Christine Stark",
-      authorImg: "https://source.unsplash.com/pUhxoSapPFA/500x500",
-      authorMetadata: "Stanford",
-    },
-  ];
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, duration: 24 });
   const scrollPrev = useCallback(() => {
@@ -59,7 +23,7 @@ function Testimonials() {
 
           <div className="embla overflow-hidden flex" ref={emblaRef}>
             <div className="embla__container flex flex-row ">
-              {testimonials.map((testimonialMetadata, index) => (
+              {testimonialData.map((testimonialMetadata, index) => (
                 <div
                   className="embla__slide flex-[0_0_33%] md:flex-[0_0_32%] mr-4 min-w-0
                         bg-white rounded-lg"

@@ -48,6 +48,30 @@
 }
 
 .getStartedBtnContainer {
-     width: 16%;
+     width: auto;
      text-align: right;
+}
+
+.menuIcon {
+     display: none;
+}
+
+@media (max-width: 1024px) {
+
+     .container {
+          justify-content: space-between;     
+     }
+
+     .navBarContainer {
+          display: none;
+     }
+
+     .getStartedBtnContainer {
+          display: none;
+     }
+
+     .menuIcon {
+          display: block;
+          color: var(--primary-blue);
+     }
 }
