@@ -1,24 +1,18 @@
-// import logo from './logo.svg';
 import "../index.css";
 import Navbar from "../components/modules/PageLayout/submodules/AppHeader/index";
 import AppFooter from "../components/modules/PageLayout/submodules/AppFooter";
 import RemindingFooter from "../components/modules/PageLayout/submodules/RemindingFooter";
 import PageTitle from "../components/modules/PageLayout/submodules/PageTitle";
-import Welcome from "../components/modules/AboutUsPage/Welcome";
-import Services from "../components/modules/AboutUsPage/Services";
-import AboutCompany from "../components/modules/AboutUsPage/AboutCompany";
 import FAQs from "../components/modules/FAQsPage/FAQs";
 import { MantineProvider } from '@mantine/core';
 
-function About() {
+function FAQ() {
   return (
     <body>
       <MantineProvider>
         <Navbar />
-        <PageTitle pageName="About Us" description="Get to know more about us!" />
-        <Welcome />
-        <Services />
-        <AboutCompany />
+        <PageTitle pageName="FAQs" description="Find the answers here!" />
+        <FAQs />
         <RemindingFooter />
         <AppFooter />
       </MantineProvider>
@@ -26,4 +20,4 @@ function About() {
   );
 }
 
-export default About;
+export default FAQ;

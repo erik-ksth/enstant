@@ -41,6 +41,9 @@ function NavBar() {
           <NavLink to="/demo" className={`navBtn ${location.pathname === "/demo" || location.pathname === "/startDemo" ? "active-tab" : ""}`}>
             Demo
           </NavLink>
+          <NavLink to="/faqs" className={`navBtn ${location.pathname === "/faqs" ? "active-tab" : ""}`}>
+            FAQs
+          </NavLink>
           <NavLink to="/about" className={`navBtn ${location.pathname === "/about" ? "active-tab" : ""}`}>
             About Us
           </NavLink>

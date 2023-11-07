@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import "../index.css";
+import 'animate.css';
 import Navbar from "../components/modules/PageLayout/submodules/AppHeader/index";
 import HeroSection from "../components/modules/HomePage/HeroSection";
 import WhatDoYouWant from "../components/modules/HomePage/WhatDoYouWantSection";

@@ -1,4 +1,5 @@
 import { Container } from "@mui/material";
+import "animate.css";
 import "../../../../index.css";
 import React from "react";
 import Btn from "../../../elements/Button/index";
@@ -19,7 +20,7 @@ function HeroSection() {
           <b>Web Portal.</b>
         </span>
       </p>
-      <Btn label="View Demo" to="/demo"/>
+      <Btn label="View Demo" to="/demo" />
       <img style={heroImg} src="/images/demo_preview.svg"></img>
     </Container>
   );

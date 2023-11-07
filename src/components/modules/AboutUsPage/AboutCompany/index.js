@@ -3,7 +3,7 @@ import React from "react";
 function AboutCompany() {
   return (
     <>
-      <div class="w-10/12 max-w-screen-xl">
+      <div class="w-10/12 max-w-screen-xl pb-12">
         <h3 class="text-left mt-20">
           About our <span>Company</span>
         </h3>
