@@ -1,5 +1,6 @@
 import { Container } from "@mui/material";
 import "animate.css";
+import "./style.css"
 import "../../../../index.css";
 import React from "react";
 import Btn from "../../../elements/Button/index";
@@ -21,7 +22,7 @@ function HeroSection() {
         </span>
       </p>
       <Btn label="View Demo" to="/demo" />
-      <img style={heroImg} src="/images/demo_preview.svg"></img>
+      <img className="heroImg" src="/images/demo_preview.svg"></img>
     </Container>
   );
 }
@@ -34,9 +35,4 @@ const container = {
   justifyContent: "center",
   alignItems: "center",
   padding: "4% 0",
-};
-
-const heroImg = {
-  width: "100%",
-  marginTop: "20px",
 };

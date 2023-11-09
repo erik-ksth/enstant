@@ -37,6 +37,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 
 code {
@@ -91,4 +92,16 @@ p {
 
 .contrastBold {
   color: var(--secondary-blue);
+}
+
+@media (max-width: 900px) {
+  body {
+    font-size: 110%;
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    font-size: 100%;
+  }
 }

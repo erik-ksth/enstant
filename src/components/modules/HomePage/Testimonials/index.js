@@ -17,7 +17,7 @@ function Testimonials() {
     <div>
       <section>
         <div class="max-w-screen-2xl py-24 w-4/5 mx-auto">
-          <h2 className="pb-16 font-bold text-5xl text-gray-800 text-center">
+          <h2 className="pb-16 font-bold text-gray-800 text-center">
             What Clients <span>Say</span>?
           </h2>
 

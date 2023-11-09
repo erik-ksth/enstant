@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./media.css"
 import Table from "react-bootstrap/Table";
 
 function getDate() {
@@ -56,7 +57,7 @@ function DemoStep2(props) {
               <p>Back-Side</p>
           </div>
           {/* Demo Input */}
-          <div>
+          <div className="demoInputContainer">
               <div class="w-full border border-2 border-gray flex flex-col">
 
                 <div style={inputContainer}>

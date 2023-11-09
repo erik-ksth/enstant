@@ -1,0 +1,9 @@
+.heroImg {
+    width: 100%;
+    margin-top: 20px;
+}
+@media (max-width: 920px) {
+    .heroImg {
+      width: 90%;
+    }
+  }

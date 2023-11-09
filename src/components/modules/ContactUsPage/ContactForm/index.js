@@ -1,6 +1,7 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
 import Button from "../../../elements/Button";
+import "./media.css"
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
@@ -15,7 +16,7 @@ export default function ContactForm() {
   return (
     <ThemeProvider theme={theme}>
       <div class="flex flex-row flex-wrap gap-x-10 my-10 justify-center">
-        <div class="w-2/5 bg-white p-10 rounded-lg flex flex-col gap-y-10 shadow-lg">
+        <div className="contantFormContainer">
           <h3 class="text-left">
             Love to <span>hear</span> from you!
           </h3>
@@ -58,7 +59,7 @@ export default function ContactForm() {
           <textarea name="question" placeholder="How can I help you?" style={{border: "1px #00000045 solid", borderRadius: "4px", padding: "10px"}}/>
           <Button label={"Submit"}></Button>
         </div>
-        <div class="flex flex-col justify-start gap-y-5">
+        <div class="flex flex-col justify-start gap-y-5 px-5">
           <h3 class="text-left">
             <span>Oakmead Printing Inc.</span>
           </h3>

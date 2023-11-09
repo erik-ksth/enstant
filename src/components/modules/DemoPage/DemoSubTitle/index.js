@@ -84,7 +84,7 @@ function DemoSubTitle() {
           {steps.map((label, index) => (
             <Step key={label} completed={completed[index]}>
               <StepButton color="inherit">
-                <div class="text-primaryBlue text-2xl font-nats">{label}</div>
+                <div class="text-primaryBlue text-xl font-nats">{label}</div>
               </StepButton>
             </Step>
           ))}

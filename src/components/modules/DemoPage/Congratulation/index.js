@@ -45,7 +45,7 @@ function Congratulation(props) {
             <br/>
             we can definitely help you achieve them at your company with our online Tool.
             <br/>
-            Get started now, by clicking on an option below.
+            Get started now, by clicking the Get Started!
           </p>
           <Button label="End Demo" to="/demo"></Button>
       </div>
@@ -69,7 +69,7 @@ const text = {
 };
 
 const promoPara = {
-  marginTop: "20px",
-  fontSize: "25px",
+  margin: "20px 0",
+  fontSize: "120%",
   lineHeight: "50px"
 };

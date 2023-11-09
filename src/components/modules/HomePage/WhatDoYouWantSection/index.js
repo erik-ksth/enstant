@@ -62,6 +62,7 @@ const listContainer = {
   flexWrap: "wrap",
   alignItems: "flex-start",
   justifyContent: "space-evenly",
+  alignItems: "center",
   rowGap: "50px",
   columnGap: "4%",
   margin: '0 0 100px 0'

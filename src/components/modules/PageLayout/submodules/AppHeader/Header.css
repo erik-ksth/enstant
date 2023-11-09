@@ -3,13 +3,13 @@
      display: flex;
      justify-content: center;
      z-index: 99;
-     position: sticky;
-     top: 0;
 }
 
 .colorChange {
      background-color: white;
      box-shadow: 0 5px 5px #00000020;
+     position: fixed;
+     top: 0;
 }
 
 .container {
@@ -52,7 +52,64 @@
      text-align: right;
 }
 
-.menuIcon {
+.menuIconWrapper {
+     display: none;
+}
+
+.menuDrawer {
+     display: block;
+     min-width: 30%;
+     background-color: white;
+     box-shadow: -10px 0 10px #00000030;
+     height: 100vh;
+     position: absolute;
+     top: 0;
+     right: 0;
+     padding: 5% 0;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     transition: right 0.5s;
+}
+
+.closeDrawer {
+     display: none;
+     /* right: -50%; */
+}
+
+.drawerNavbarContainer {
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     margin-top: 50px;
+}
+
+.drawerNavBtn {
+     width: 100%;
+     padding: 5% 10%;
+}
+
+.drawerNavBtn:hover,
+.drawerNavBtn.active-tab-drawer {
+     background-color: #277FD030;
+}
+
+.drawerGetStartedBtnContainer {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+}
+
+.dimOverlay {
+     display: block;
+     width: 100vw;
+     height: 100vh;
+     position: absolute;
+     background-color: #00000030;
+     backdrop-filter: blur(3px);
+}
+
+.dimOverlay.hideDimOverlay {
      display: none;
 }
 
@@ -60,6 +117,7 @@
 
      .container {
           justify-content: space-between;     
+          width: 100vw;
      }
 
      .navBarContainer {
@@ -70,8 +128,13 @@
           display: none;
      }
 
-     .menuIcon {
+     .menuIconWrapper {
           display: block;
+          z-index: 99;
+     }
+
+     .menuIcon {
           color: var(--primary-blue);
      }
+
 }
