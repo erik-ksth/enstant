@@ -83,7 +83,7 @@ function NavBar() {
               location.pathname === "/clients" ? "active-tab" : ""
             }`}
           >
-            Cients
+            Clients
           </NavLink>
           <NavLink
             to="/contactUs"
@@ -149,7 +149,7 @@ function NavBar() {
               location.pathname === "/clients" ? "active-tab-drawer" : ""
             }`}
           >
-            Cients
+            Clients
           </NavLink>
           <NavLink
             to="/contactUs"

@@ -100,10 +100,10 @@ function Step4() {
           <ol start="3">
             <li>
                     If you don't know the specifications of the paper, <br/>
-                    you can <span><a href="mailto:sales@enstant.com">click here</a></span> to email your Company's Business Card Guideline, Artwork and Fonts files. <br/>
+                    you can upload your Company's Business Card Guideline, Artwork and Fonts files below. <br/>
                     Provid a vector graphic of your Company's logo in <span>.ai</span> or <span>.eps</span> file format. <br/>
                     Compress all files as either <span>.sit</span> or <span>.zip</span> file before emailing as attachment. <br/>
-                
+                    <input type="file"/>
             </li>
           </ol>
         </div>

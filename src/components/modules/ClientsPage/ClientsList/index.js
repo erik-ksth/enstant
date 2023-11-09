@@ -13,7 +13,7 @@ function ClientsList() {
             key={logo.id}
             src={logo.logo}
             alt={`Logo ${logo.id}`}
-            class="w-28 self-center"
+            class="w-full self-center"
           />
         ))}
       </div>

@@ -16,7 +16,7 @@ export default function ContactForm() {
   return (
     <ThemeProvider theme={theme}>
       <div class="flex flex-row flex-wrap gap-x-10 my-10 justify-center">
-        <div className="contantFormContainer">
+        <form className="contantFormContainer">
           <h3 class="text-left">
             Love to <span>hear</span> from you!
           </h3>
@@ -57,8 +57,10 @@ export default function ContactForm() {
             required
           />
           <textarea name="question" placeholder="How can I help you?" style={{border: "1px #00000045 solid", borderRadius: "4px", padding: "10px"}}/>
-          <Button label={"Submit"}></Button>
-        </div>
+          <button type="submit">
+            <Button label={"Submit"}></Button>
+          </button>
+        </form>
         <div class="flex flex-col justify-start gap-y-5 px-5">
           <h3 class="text-left">
             <span>Oakmead Printing Inc.</span>

@@ -118,6 +118,8 @@
      .container {
           justify-content: space-between;     
           width: 100vw;
+          padding-left: 5%;
+          padding-right: 5%;
      }
 
      .navBarContainer {
