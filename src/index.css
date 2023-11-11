@@ -102,8 +102,9 @@ p {
 
 @media (max-width: 430px) {
   body {
+    width: 100vw;
     font-size: 105%;
-    padding: 0 5%;
+    overflow-x: hidden;
   }
 
   h1 {
