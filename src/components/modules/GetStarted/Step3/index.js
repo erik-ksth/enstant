@@ -2,7 +2,10 @@ import React from "react";
 import "../GetStarted.css";
 import "../../../../index.css";
 
-function Step3() {
+function Step3({ formData, setFormData }) {
+  const handleRadioChange = (fieldName, value) => {
+    setFormData({ ...formData, [fieldName]: value });
+  };
   return (
     <>
       <h2>
@@ -18,7 +21,17 @@ function Step3() {
               <label>Name:</label>
             </div>
             <div className="rightCol">
-              <input type="text" id="name"></input>
+              <input
+                type="text"
+                id="decisionMakerName"
+                value={formData.decisionMakerName}
+                onChange={(e) => {
+                  setFormData({
+                    ...formData,
+                    decisionMakerName: e.target.value,
+                  });
+                }}
+              ></input>
             </div>
           </div>
 
@@ -27,7 +40,17 @@ function Step3() {
               <label>Job Title:</label>
             </div>
             <div className="rightCol">
-              <input type="text" id="jobTitle"></input>
+              <input
+                type="text"
+                id="decisionMakerJobTitle"
+                value={formData.decisionMakerJobTitle}
+                onChange={(e) => {
+                  setFormData({
+                    ...formData,
+                    decisionMakerJobTitle: e.target.value,
+                  });
+                }}
+              ></input>
             </div>
           </div>
 
@@ -36,7 +59,17 @@ function Step3() {
               <label>Email:</label>
             </div>
             <div className="rightCol">
-              <input type="email" id="email"></input>
+              <input
+                type="email"
+                id="decisionMakerEmail"
+                value={formData.decisionMakerEmail}
+                onChange={(e) => {
+                  setFormData({
+                    ...formData,
+                    decisionMakerEmail: e.target.value,
+                  });
+                }}
+              ></input>
             </div>
           </div>
         </div>
@@ -51,6 +84,8 @@ function Step3() {
                 id="daily"
                 name="orderFrequency"
                 value="daily"
+                checked={formData.orderFrequency === "daily"}
+                onChange={() => handleRadioChange("orderFrequency", "daily")}
               ></input>
               <label for="daily">Daily</label>
             </div>
@@ -61,6 +96,8 @@ function Step3() {
                 id="weekly"
                 name="orderFrequency"
                 value="weekly"
+                checked={formData.orderFrequency === "weekly"}
+                onChange={() => handleRadioChange("orderFrequency", "weekly")}
               ></input>
               <label for="weekly">Weekly</label>
             </div>
@@ -71,6 +108,8 @@ function Step3() {
                 id="monthly"
                 name="orderFrequency"
                 value="monthly"
+                checked={formData.orderFrequency === "monthly"}
+                onChange={() => handleRadioChange("orderFrequency", "monthly")}
               ></input>
               <label for="monthly">Monthly</label>
             </div>
@@ -81,9 +120,18 @@ function Step3() {
                 id="other"
                 name="orderFrequency"
                 value="other"
+                checked={formData.orderFrequency === "other"}
+                onChange={() => handleRadioChange("orderFrequency", "other")}
               ></input>
               <label for="other">Other</label>
-              <input style={{ width: "200px" }} type="text" id="other"></input>
+              <input
+                style={{ width: "200px" }}
+                type="text"
+                id="other"
+                onChange={(e) =>
+                  handleRadioChange("otherFrequency", e.target.value)
+                }
+              ></input>
             </div>
           </div>
         </div>
@@ -99,8 +147,12 @@ function Step3() {
               <input
                 type="radio"
                 id="fax"
-                name="currentOrderMethod"
+                name="currentOrderRequestMethod"
                 value="fax"
+                checked={formData.currentOrderRequestMethod === "fax"}
+                onChange={() =>
+                  handleRadioChange("currentOrderRequestMethod", "fax")
+                }
               ></input>
               <label for="fax">Fax</label>
             </div>
@@ -109,8 +161,12 @@ function Step3() {
               <input
                 type="radio"
                 id="email"
-                name="currentOrderMethod"
+                name="currentOrderRequestMethod"
                 value="email"
+                checked={formData.currentOrderRequestMethod === "email"}
+                onChange={() =>
+                  handleRadioChange("currentOrderRequestMethod", "email")
+                }
               ></input>
               <label for="email">Email</label>
             </div>
@@ -119,8 +175,12 @@ function Step3() {
               <input
                 type="radio"
                 id="onlineSystem"
-                name="currentOrderMethod"
+                name="currentOrderRequestMethod"
                 value="onlineSystem"
+                checked={formData.currentOrderRequestMethod === "onlineSystem"}
+                onChange={() =>
+                  handleRadioChange("currentOrderRequestMethod", "onlineSystem")
+                }
               ></input>
               <label for="onlineSystem">Online System</label>
             </div>
@@ -129,11 +189,22 @@ function Step3() {
               <input
                 type="radio"
                 id="other"
-                name="currentOrderMethod"
+                name="currentOrderRequestMethod"
                 value="other"
+                checked={formData.currentOrderRequestMethod === "other"}
+                onChange={() =>
+                  handleRadioChange("currentOrderRequestMethod", "other")
+                }
               ></input>
               <label for="other">Other</label>
-              <input style={{ width: "200px" }} type="text" id="other"></input>
+              <input
+                style={{ width: "200px" }}
+                type="text"
+                id="other"
+                onChange={(e) =>
+                  handleRadioChange("currentOrderRequestMethod", e.target.value)
+                }
+              ></input>
             </div>
           </div>
         </div>
@@ -146,8 +217,12 @@ function Step3() {
               <input
                 type="radio"
                 id="fax"
-                name="currentOrderMethod"
+                name="currentOrderPlaceMethod"
                 value="fax"
+                checked={formData.currentOrderPlaceMethod === "fax"}
+                onChange={() =>
+                  handleRadioChange("currentOrderPlaceMethod", "fax")
+                }
               ></input>
               <label for="fax">Fax</label>
             </div>
@@ -156,8 +231,12 @@ function Step3() {
               <input
                 type="radio"
                 id="email"
-                name="currentOrderMethod"
+                name="currentOrderPlaceMethod"
                 value="email"
+                checked={formData.currentOrderPlaceMethod === "email"}
+                onChange={() =>
+                  handleRadioChange("currentOrderPlaceMethod", "email")
+                }
               ></input>
               <label for="email">Email</label>
             </div>
@@ -166,8 +245,12 @@ function Step3() {
               <input
                 type="radio"
                 id="onlineSystem"
-                name="currentOrderMethod"
+                name="currentOrderPlaceMethod"
                 value="onlineSystem"
+                checked={formData.currentOrderPlaceMethod === "onlineSystem"}
+                onChange={() =>
+                  handleRadioChange("currentOrderPlaceMethod", "onlineSystem")
+                }
               ></input>
               <label for="onlineSystem">Online System</label>
             </div>
@@ -176,11 +259,22 @@ function Step3() {
               <input
                 type="radio"
                 id="other"
-                name="currentOrderMethod"
+                name="currentOrderPlaceMethod"
                 value="other"
+                checked={formData.currentOrderPlaceMethod === "other"}
+                onChange={() =>
+                  handleRadioChange("currentOrderPlaceMethod", "other")
+                }
               ></input>
               <label for="other">Other</label>
-              <input style={{ width: "200px" }} type="text" id="other"></input>
+              <input
+                style={{ width: "200px" }}
+                type="text"
+                id="other"
+                onChange={(e) =>
+                  handleRadioChange("currentOrderPlaceMethod", e.target.value)
+                }
+              ></input>
             </div>
           </div>
         </div>

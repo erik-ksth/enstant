@@ -1,0 +1,30 @@
+.formContainer {
+     margin-bottom: 10%;
+}
+
+.body {
+     margin-top: 5%;
+}
+
+.footer {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+}
+
+.nextBtns {
+     display: flex;
+     column-gap: 20px;
+}
+
+.skipBtn {
+     text-decoration: underline;
+}
+
+.skipBtn:hover {
+     color: #777777;
+}
+
+.disableBack {
+     justify-content: center;
+}
