@@ -58,7 +58,7 @@
 
 .menuDrawer {
      display: block;
-     min-width: 40%;
+     min-width: 50%;
      background-color: white;
      box-shadow: -10px 0 10px #00000030;
      height: 100vh;
