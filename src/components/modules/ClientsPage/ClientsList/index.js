@@ -7,13 +7,13 @@ function ClientsList() {
       <h3 class="mb-16">
         We are <span>Trusted</span> by businesses of all sizes
       </h3>
-      <div class="grid grid-cols-4 place-items-center gap-y-20 gap-x-20">
+      <div class="grid grid-cols-4 place-items-center gap-y-20 gap-x-10">
         {logoData.map((logo) => (
           <img
             key={logo.id}
             src={logo.logo}
             alt={`Logo ${logo.id}`}
-            class="w-full self-center"
+            style={logo}
           />
         ))}
       </div>
@@ -37,3 +37,8 @@ const container = {
   padding: "50px 5%",
   margin: "50px 0 50px 0",
 };
+
+const logo = {
+  width: "100%",
+  
+}
