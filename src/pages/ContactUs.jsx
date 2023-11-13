@@ -5,6 +5,7 @@ import AppFooter from '../components/modules/PageLayout/submodules/AppFooter';
 import RemindingFooter from '../components/modules/PageLayout/submodules/RemindingFooter';
 import PageTitle from '../components/modules/PageLayout/submodules/PageTitle'
 import ContactForm from '../components/modules/ContactUsPage/ContactForm';
+import ReferralSession from '../components/modules/ContactUsPage/ReferralSession';
 
 
 function ContactUs() {
@@ -13,6 +14,7 @@ function ContactUs() {
           <Navbar/>
           <PageTitle pageName="Contact Us" description="Get in touch and let us know how we can help!" />
           <ContactForm/>
+          <ReferralSession/>
           <RemindingFooter/>
           <AppFooter/>
      </body>

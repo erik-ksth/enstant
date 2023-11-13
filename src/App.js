@@ -15,6 +15,7 @@ import Clients from "./pages/Clients"
 import ContactUs from "./pages/ContactUs";
 import GetStarted from "./pages/GetStarted";
 import StartDemo from './pages/DemoSteps/StartDemo'
+import Referral from "./pages/Referral";
 import ScrollToTop from "./components/modules/PageLayout/ScrollToTop/ScrollToTop";
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <Route path="/contactus" element={<ContactUs/>}/>
             <Route path="/startDemo" element={<StartDemo/>}/>
             <Route path="/getStarted" element={<GetStarted/>}/>
+            <Route path="/referral" element={<Referral/>}/>
           </Routes>
       </Router>
     </>
