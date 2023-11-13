@@ -21,3 +21,10 @@
     color: white;
     text-decoration: none;
 }
+
+@media (max-width: 450px) {
+    .footerNavBarContainer {
+        width: 60%;
+        row-gap: 20px;
+    }
+}

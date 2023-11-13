@@ -9,7 +9,7 @@ function Step3({ formData, setFormData }) {
   return (
     <>
       <h2>
-        About your <span>business cards</span>
+        About your business cards <span>ordering process</span>
       </h2>
       <p className="description">(Optional)</p>
       <div className="inputContainer">
@@ -129,7 +129,7 @@ function Step3({ formData, setFormData }) {
                 type="text"
                 id="other"
                 onChange={(e) =>
-                  handleRadioChange("otherFrequency", e.target.value)
+                  handleRadioChange("orderFrequency", e.target.value)
                 }
               ></input>
             </div>

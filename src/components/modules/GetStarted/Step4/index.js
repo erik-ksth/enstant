@@ -15,7 +15,7 @@ function Step4({ formData, setFormData }) {
   return (
     <>
       <h2>
-        About your business card <span>ordering process</span>
+        About your <span>business cards</span>
       </h2>
       <p className="description">(Optional)</p>
       <div className="inputContainer">
@@ -95,37 +95,37 @@ function Step4({ formData, setFormData }) {
             <div className="radioInput">
               <input
                 type="radio"
-                id="illustrator"
+                id="Illustrator"
                 name="software"
-                value="illustrator"
-                checked={formData.software === "illustrator"}
-                onChange={() => handleRadioChange("software", "illustrator")}
+                value="Illustrator"
+                checked={formData.software === "Illustrator"}
+                onChange={() => handleRadioChange("software", "Illustrator")}
               ></input>
-              <label for="illustrator">Illustrator</label>
+              <label for="Illustrator">Illustrator</label>
             </div>
 
             <div className="radioInput">
               <input
                 type="radio"
-                id="inDesign"
+                id="InDesign"
                 name="software"
-                value="inDesign"
-                checked={formData.software === "inDesign"}
-                onChange={() => handleRadioChange("software", "inDesign")}
+                value="InDesign"
+                checked={formData.software === "InDesign"}
+                onChange={() => handleRadioChange("software", "InDesign")}
               ></input>
-              <label for="inDesign">InDesign</label>
+              <label for="InDesign">InDesign</label>
             </div>
 
             <div className="radioInput">
               <input
                 type="radio"
-                id="quarkExpress"
+                id="QuarkExpress"
                 name="software"
-                value="quarkExpress"
-                checked={formData.software === "quarkExpress"}
-                onChange={() => handleRadioChange("software", "quarkExpress")}
+                value="QuarkExpress"
+                checked={formData.software === "QuarkExpress"}
+                onChange={() => handleRadioChange("software", "QuarkExpress")}
               ></input>
-              <label for="quarkExpress">QuarkExpress</label>
+              <label for="QuarkExpress">QuarkExpress</label>
             </div>
 
             <div className="radioInput">
@@ -143,7 +143,7 @@ function Step4({ formData, setFormData }) {
                 type="text"
                 id="other"
                 onChange={(e) =>
-                  handleRadioChange("otherFrequency", e.target.value)
+                  handleRadioChange("software", e.target.value)
                 }
               ></input>
             </div>

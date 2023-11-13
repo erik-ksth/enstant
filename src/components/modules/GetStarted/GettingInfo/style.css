@@ -1,9 +1,18 @@
 .formContainer {
-     margin-bottom: 10%;
+     margin-bottom: 5%;
 }
 
 .body {
      margin-top: 5%;
+}
+
+.alert {
+     color: red;
+     margin-bottom: 5%;
+}
+
+.alert > p {
+     text-align: center;
 }
 
 .footer {

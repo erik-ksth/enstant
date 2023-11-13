@@ -2,14 +2,20 @@ import React from "react";
 import "../GetStarted.css";
 import "../../../../index.css";
 
-function Step4() {
+function Step4({ formData, setFormData }) {
   return (
     <>
-      <h2>
-        Questions or Comments
-      </h2>
+      <h2>Questions or Comments</h2>
       <p className="description">(Optional)</p>
-      <textarea id="comments" name="comments" rows="5"></textarea>
+      <textarea
+        id="comment"
+        name="comment"
+        rows="5"
+        value={formData.comments}
+        onChange={(event) =>
+          setFormData({ ...formData, comment: event.target.value })
+        }
+      ></textarea>
     </>
   );
 }

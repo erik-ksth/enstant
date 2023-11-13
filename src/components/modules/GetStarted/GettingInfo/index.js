@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Btn from "../../../elements/Button";
+import emailjs from "emailjs-com";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Step1 from "../Step1";
 import Step2 from "../Step2";
@@ -18,6 +19,7 @@ const theme = createTheme({
 
 export default function GettingInfo() {
   const [skipped, setSkipped] = React.useState(new Set());
+  const [alertMessage, setAlertMessage] = useState("");
   const [page, setPage] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
@@ -45,6 +47,7 @@ export default function GettingInfo() {
     paperFinish: "",
     software: "",
     sample: "",
+    comment: "",
   });
 
   const FormTitles = [
@@ -53,7 +56,7 @@ export default function GettingInfo() {
     "About your business cards",
     "About your business cards ordering process",
     "Questions or Comments",
-    "Submitted"
+    "Submitted",
   ];
 
   const PageDisplay = () => {
@@ -77,8 +80,53 @@ export default function GettingInfo() {
     return step === 1 || step === 2 || step === 3;
   };
 
-  const isStepSkipped = (step) => {
-    return skipped.has(step);
+  const validateStep1 = () => {
+    const requiredFields = ["name", "jobTitle", "phone", "email"];
+    for (const field of requiredFields) {
+      if (!formData[field]) {
+        // Field is empty, display an alert or handle it as per your requirement
+        setAlertMessage(`*Please complete the form.`);
+        return false;
+      }
+    }
+    return true;
+  };
+
+  const sendEmail = () => {
+    // Replace these values with your actual EmailJS values
+    const serviceId = "service_oygz4k4";
+    const templateId = "template_glhdopp";
+    const apiKey = "4elLZ1D6Fal_HMqxQ";
+
+    emailjs
+      .send(serviceId, templateId, formData, apiKey)
+      .then((response) => {
+        console.log("Email sent successfully:", response);
+        // Optionally, you can show a success message to the user
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+        // Show an error message to the user
+        setAlertMessage("*Error submitting the form. Please try again.");
+      });
+  };
+
+  const handleNext = () => {
+    if (page === 0 && !validateStep1()) {
+      return;
+    }
+
+    setAlertMessage(""); // Clear the alert message
+    // Continue with the logic to navigate to the next step
+    setPage((currPage) => currPage + 1);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleSubmit = () => {
+    setPage((currPage) => currPage + 1);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    sendEmail();
+    console.log("All Form Data: ", formData);
   };
 
   return (
@@ -86,6 +134,11 @@ export default function GettingInfo() {
       <div className="form">
         <div className="formContainer">
           <div className="body">{PageDisplay()}</div>
+          {alertMessage && (
+            <div className="alert">
+              <p>{alertMessage}</p>
+            </div>
+          )}
           {page <= FormTitles.length - 2 && (
             <div className={`footer ${page == 0 ? "disableBack" : ""}`}>
               {/* Back Button */}
@@ -115,23 +168,17 @@ export default function GettingInfo() {
                   </button>
                 )}
                 {/* Continue Button */}
-                <button
-                  onClick={() => {
-                    if (page === FormTitles.length - 2) {
-                      setPage((currPage) => currPage + 1);
-                      console.log(formData);
-                    } else {
-                      setPage((currPage) => currPage + 1);
-                    }
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
+                <div>
                   {page === FormTitles.length - 2 ? (
-                    <Btn label={"Submit"} />
+                    <button onClick={handleSubmit}>
+                      <Btn label={"Submit"} />
+                    </button>
                   ) : (
-                    <Btn label={"Continue"} />
+                    <button onClick={handleNext}>
+                      <Btn label={"Continue"} />
+                    </button>
                   )}
-                </button>
+                </div>
               </div>
             </div>
           )}

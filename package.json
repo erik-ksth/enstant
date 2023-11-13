@@ -19,6 +19,7 @@
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.2",
+    "emailjs-com": "^3.2.0",
     "embla-carousel-class-names": "^8.0.0-rc14",
     "embla-carousel-react": "^8.0.0-rc14",
     "i18next": "^23.6.0",

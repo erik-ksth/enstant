@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import Button from "../../../elements/Button";
-import "./media.css"
+import "./media.css";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
@@ -13,6 +13,31 @@ const theme = createTheme({
 });
 
 export default function ContactForm() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    company: "",
+    email: "",
+    phone: "",
+    question: "",
+  });
+
+  const validateForm = () => {
+    const requiredFields = ["firstName", "lastName", "email", "phone"];
+    for (const field of requiredFields) {
+      if (!formData[field]) {
+        return false;
+      }
+    }
+    return true;
+  };
+
+  const handleSubmit = () => {
+    if (validateForm()) {
+      console.log("Contact Form Data: ", formData);
+    }
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <div class="flex flex-row flex-wrap gap-x-10 my-10 justify-center">
@@ -27,6 +52,10 @@ export default function ContactForm() {
               variant="outlined"
               size="small"
               required
+              value={formData.firstName}
+              onChange={(event) =>
+                setFormData({ ...formData, firstName: event.target.value })
+              }
             />
             <TextField
               id="outlined-basic"
@@ -34,6 +63,10 @@ export default function ContactForm() {
               variant="outlined"
               size="small"
               required
+              value={formData.lastName}
+              onChange={(event) =>
+                setFormData({ ...formData, lastName: event.target.value })
+              }
             />
           </div>
           <TextField
@@ -41,6 +74,10 @@ export default function ContactForm() {
             label="Company"
             variant="outlined"
             size="small"
+            value={formData.company}
+            onChange={(event) =>
+              setFormData({ ...formData, company: event.target.value })
+            }
           />
           <TextField
             id="email"
@@ -48,6 +85,10 @@ export default function ContactForm() {
             variant="outlined"
             size="small"
             required
+            value={formData.email}
+            onChange={(event) =>
+              setFormData({ ...formData, email: event.target.value })
+            }
           />
           <TextField
             id="phone"
@@ -55,10 +96,26 @@ export default function ContactForm() {
             variant="outlined"
             size="small"
             required
+            value={formData.phone}
+            onChange={(event) =>
+              setFormData({ ...formData, phone: event.target.value })
+            }
           />
-          <textarea name="question" placeholder="How can I help you?" style={{border: "1px #00000045 solid", borderRadius: "4px", padding: "10px"}}/>
-          <button type="submit">
-            <Button label={"Submit"}></Button>
+          <textarea
+            name="question"
+            placeholder="How can I help you?"
+            style={{
+              border: "1px #00000045 solid",
+              borderRadius: "4px",
+              padding: "10px",
+            }}
+            value={formData.question}
+            onChange={(event) =>
+              setFormData({ ...formData, question: event.target.value })
+            }
+          />
+          <button type="submit" className="button" onClick={handleSubmit}>
+            Submit
           </button>
         </form>
         <div class="flex flex-col justify-start gap-y-5 px-5">
@@ -76,7 +133,8 @@ export default function ContactForm() {
             <span>Fax:</span> <a href="fax: +14087343323">+1 (408) 734-3323</a>
           </p>
           <p>
-            <span>Email:</span> <a href="mailto:sales@enstant.com">sales@enstant.com</a>
+            <span>Email:</span>{" "}
+            <a href="mailto:sales@enstant.com">sales@enstant.com</a>
           </p>
           <div style={{ width: "100%", height: "400px" }}>
             <iframe

@@ -1,12 +1,13 @@
 import React from "react";
 import Button from "../../../../elements/Button";
+import "./style.css";
 
 function RemindingFooter() {
   return (
-    <div style={parentContainer}>
-      <div style={childContainer}>
-        <div style={firstColumn}>
-          <h2 style={{ textAlign: "left" }}>
+    <div className="box">
+      <div className="childContainer">
+        <div className="firstColumn">
+          <h2>
             Ready to
             <br />
             <span>Start Ordering</span>?
@@ -16,18 +17,18 @@ function RemindingFooter() {
             <br />
             No payment is required to get started.
           </p>
-          <Button label={"Get Started"} to="/getStarted"/>
+          <Button label={"Get Started"} to="/getStarted" />
         </div>
-        <div style={secondColumn}>
+        <div className="secondColumn">
           <div>
-            <h2 style={{ textAlign: "left" }}>
+            <h2>
               Want to <span>know</span>
               <br />
               how it works?
             </h2>
             <p class="py-5">Experience a quick interactive demo!</p>
           </div>
-          <Button label={"View Demo"} to="/demo"/>
+          <Button label={"View Demo"} to="/demo" />
         </div>
       </div>
     </div>
@@ -35,35 +36,3 @@ function RemindingFooter() {
 }
 
 export default RemindingFooter;
-
-const parentContainer = {
-  width: "100%",
-  backgroundColor: "white",
-  display: 'flex',
-  justifyContent: 'center',
-};
-
-const childContainer = {
-  padding: "3% 5%",
-  display: "flex",
-  flexWrap: "wrap",
-  width: '100%',
-  maxWidth: "1500px",
-};
-
-const firstColumn = {
-  width: "49%",
-  height: "100%",
-  borderRight: "1px solid var(--text-color)",
-  paddingRight: '5%',
-};
-
-const secondColumn = {
-  width: "45%",
-  minheight: "100%",
-  paddingLeft: "5%",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between",
-  alignItems: "flex-start",
-};

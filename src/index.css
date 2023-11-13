@@ -94,6 +94,21 @@ p {
   color: var(--secondary-blue);
 }
 
+.button {
+  background-color: var(--primary-blue);
+  color: white;
+  text-transform: none;
+  font-family: NatsReg;
+  font-size: 20px;
+  padding: 10px 25px;
+  border-radius: 5px;
+  box-shadow: #00000030 0 5px 5px;
+}
+
+.button:hover {
+  background-color: #1E6AB1;
+}
+
 @media (max-width: 900px) {
   body {
     font-size: 130%;
