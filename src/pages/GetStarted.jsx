@@ -5,6 +5,7 @@ import RemindingFooter from '../components/modules/PageLayout/submodules/Remindi
 import PageTitle from '../components/modules/PageLayout/submodules/PageTitle'
 import Description from '../components/modules/GetStarted/Description';
 import GettingInfo from '../components/modules/GetStarted/GettingInfo'
+import ScrollToTopButton from "../components/elements/ScrollToTop";
 
 function GetStarted() {
   return (
@@ -14,6 +15,7 @@ function GetStarted() {
           <Description/>
           <GettingInfo/>
           <RemindingFooter/>
+          <ScrollToTopButton/>
           <AppFooter/>
      </body>
   );

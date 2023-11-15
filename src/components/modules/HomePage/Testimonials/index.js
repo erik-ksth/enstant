@@ -1,10 +1,9 @@
 import { ChevronLeft, ChevronRight } from "react-bootstrap-icons";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback } from "react";
-import testimonialData from './testimonialData';
+import testimonialData from "./testimonialData";
 
 function Testimonials() {
-
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, duration: 24 });
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -21,8 +20,8 @@ function Testimonials() {
             What Clients <span>Say</span>?
           </h2>
 
-          <div className="embla overflow-hidden flex" ref={emblaRef}>
-            <div className="embla__container flex flex-row ">
+          <div className="embla overflow-hidden flex justify-center" ref={emblaRef}>
+            <div className="embla__container flex flex-row">
               {testimonialData.map((testimonialMetadata, index) => (
                 <div
                   className="embla__slide flex-[0_0_33%] md:flex-[0_0_32%] mr-4 min-w-0

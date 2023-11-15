@@ -4,6 +4,7 @@ import AppFooter from "../components/modules/PageLayout/submodules/AppFooter";
 import RemindingFooter from "../components/modules/PageLayout/submodules/RemindingFooter";
 import PageTitle from "../components/modules/PageLayout/submodules/PageTitle";
 import FAQs from "../components/modules/FAQsPage/FAQs";
+import ScrollToTopButton from "../components/elements/ScrollToTop";
 import { MantineProvider } from '@mantine/core';
 
 function FAQ() {
@@ -15,6 +16,7 @@ function FAQ() {
         <FAQs />
         <RemindingFooter />
         <AppFooter />
+        <ScrollToTopButton />
       </MantineProvider>
     </body>
   );

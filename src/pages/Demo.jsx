@@ -5,6 +5,7 @@ import RemindingFooter from '../components/modules/PageLayout/submodules/Remindi
 import AppFooter from '../components/modules/PageLayout/submodules/AppFooter';
 import PageTitle from '../components/modules/PageLayout/submodules/PageTitle';
 import WelcomeDemo from '../components/modules/DemoPage/Welcome';
+import ScrollToTopButton from "../components/elements/ScrollToTop";
 
 function Demo() {
   return (
@@ -14,6 +15,7 @@ function Demo() {
           <WelcomeDemo/>
           <RemindingFooter/>
           <AppFooter/>
+          <ScrollToTopButton />
      </body>
   );
 }

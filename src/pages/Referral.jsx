@@ -5,6 +5,7 @@ import RemindingFooter from "../components/modules/PageLayout/submodules/Remindi
 import PageTitle from "../components/modules/PageLayout/submodules/PageTitle";
 import { MantineProvider } from '@mantine/core';
 import ReferralForm from "../components/modules/ReferralPage/ReferralForm";
+import ScrollToTopButton from "../components/elements/ScrollToTop";
 
 function Referral() {
   return (
@@ -15,6 +16,7 @@ function Referral() {
         <ReferralForm />
         <RemindingFooter />
         <AppFooter />
+        <ScrollToTopButton />
       </MantineProvider>
     </body>
   );

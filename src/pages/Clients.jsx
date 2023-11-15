@@ -5,6 +5,7 @@ import RemindingFooter from "../components/modules/PageLayout/submodules/Remindi
 import PageTitle from "../components/modules/PageLayout/submodules/PageTitle";
 import { MantineProvider } from '@mantine/core';
 import ClientsList from "../components/modules/ClientsPage/ClientsList";
+import ScrollToTopButton from "../components/elements/ScrollToTop";
 
 function About() {
   return (
@@ -15,6 +16,7 @@ function About() {
         <ClientsList />
         <RemindingFooter />
         <AppFooter />
+        <ScrollToTopButton />
       </MantineProvider>
     </body>
   );

@@ -94,7 +94,6 @@ export default function GettingInfo() {
   };
 
   const sendEmail = () => {
-    // Replace these values with your actual EmailJS values
     const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
     const templateId = process.env.REACT_APP_EMAILJS_GETSTARTED_TEMPLATE_ID;
     const apiKey = process.env.REACT_APP_EMAILJS_API_KEY;

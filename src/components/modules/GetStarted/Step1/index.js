@@ -14,14 +14,6 @@ function Step1({ formData, setFormData }) {
               <label>Name:</label>
             </div>
             <div className="rightCol">
-              {/* <select id="prefix">
-                                <option defaultValue="-">Select</option>
-                                <option value="Mr.">Mr.</option>
-                                <option value="Mrs.">Mrs.</option>
-                                <option value="Ms.">Ms.</option>
-                                <option value="Miss.">Miss</option>
-                                <option value="Dr.">Dr.</option>
-                            </select> */}
               <input
                 type="text"
                 id="name"

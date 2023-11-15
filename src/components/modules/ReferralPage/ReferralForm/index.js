@@ -54,7 +54,7 @@ function ReferralForm() {
       console.log("Contact Form Data: ", formData);
       sendEmail();
     } else {
-     setAlertMessage("*Please complete the form.");
+      setAlertMessage("*Please complete the form.");
     }
   };
 
@@ -158,10 +158,10 @@ function ReferralForm() {
           />
         </div>
         {alertMessage && (
-            <div className="alert">
-              <p>{alertMessage}</p>
-            </div>
-          )}
+          <div className="alert">
+            <p>{alertMessage}</p>
+          </div>
+        )}
         <button
           className="button"
           style={{ width: "100px", marginTop: "30px" }}

@@ -17,7 +17,7 @@ function RemindingFooter() {
             <br />
             No payment is required to get started.
           </p>
-          <Button label={"Get Started"} to="/getStarted" />
+          <a href="/getStarted" className="link">Get Started</a>
         </div>
         <div className="secondColumn">
           <div>
@@ -28,7 +28,7 @@ function RemindingFooter() {
             </h2>
             <p class="py-5">Experience a quick interactive demo!</p>
           </div>
-          <Button label={"View Demo"} to="/demo" />
+          <a href="/demo" className="link">View Demo</a>
         </div>
       </div>
     </div>

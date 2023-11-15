@@ -7,7 +7,6 @@ function PageTitle(props) {
             <div class="w-screen p-10 flex flex-col justify-center">
                 <div>
                     <h1><span>{props.pageName}</span></h1>
-                    {/* <h1 className="shadowText">{props.pageName}</h1> */}
                 </div>
                 <p class="text-center font-lexendPetaLight text-base tracking-tighter">{props.description}</p>
             </div>

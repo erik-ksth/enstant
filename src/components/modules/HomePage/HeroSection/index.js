@@ -1,6 +1,6 @@
 import { Container } from "@mui/material";
 import "animate.css";
-import "./style.css"
+import "./style.css";
 import "../../../../index.css";
 import React from "react";
 import Btn from "../../../elements/Button/index";

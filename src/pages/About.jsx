@@ -7,7 +7,7 @@ import PageTitle from "../components/modules/PageLayout/submodules/PageTitle";
 import Welcome from "../components/modules/AboutUsPage/Welcome";
 import Services from "../components/modules/AboutUsPage/Services";
 import AboutCompany from "../components/modules/AboutUsPage/AboutCompany";
-import FAQs from "../components/modules/FAQsPage/FAQs";
+import ScrollToTopButton from "../components/elements/ScrollToTop";
 import { MantineProvider } from '@mantine/core';
 
 function About() {
@@ -21,6 +21,7 @@ function About() {
         <AboutCompany />
         <RemindingFooter />
         <AppFooter />
+        <ScrollToTopButton />
       </MantineProvider>
     </body>
   );

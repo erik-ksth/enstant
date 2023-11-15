@@ -15,11 +15,11 @@ function ClientsLogos() {
           <ul>
             {logos.map((image) => (
               <li>
-                  <img
-                    key={image.id}
-                    src={image.logo}
-                    alt={`Image ${image.id}`}
-                  />
+                <img
+                  key={image.id}
+                  src={image.logo}
+                  alt={`Image ${image.id}`}
+                />
               </li>
             ))}
           </ul>
@@ -44,7 +44,7 @@ const childContainer = {
   display: "flex",
   justifyContent: "center",
   flexDirection: "column",
-  alignItems: "center"
+  alignItems: "center",
 };
 
 const logoContainer = {

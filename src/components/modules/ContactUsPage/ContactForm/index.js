@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
-import Button from "../../../elements/Button";
 import "./media.css";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -36,7 +35,7 @@ export default function ContactForm() {
     if (validateForm()) {
       console.log("Contact Form Data: ", formData);
     }
-  }
+  };
 
   return (
     <ThemeProvider theme={theme}>

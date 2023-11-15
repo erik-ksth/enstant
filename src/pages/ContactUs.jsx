@@ -6,6 +6,7 @@ import RemindingFooter from '../components/modules/PageLayout/submodules/Remindi
 import PageTitle from '../components/modules/PageLayout/submodules/PageTitle'
 import ContactForm from '../components/modules/ContactUsPage/ContactForm';
 import ReferralSession from '../components/modules/ContactUsPage/ReferralSession';
+import ScrollToTopButton from "../components/elements/ScrollToTop";
 
 
 function ContactUs() {
@@ -17,6 +18,7 @@ function ContactUs() {
           <ReferralSession/>
           <RemindingFooter/>
           <AppFooter/>
+        <ScrollToTopButton />
      </body>
   );
 }

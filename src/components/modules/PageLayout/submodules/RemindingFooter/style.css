@@ -36,6 +36,15 @@
      text-align: left;
 }
 
+.link {
+     text-decoration: underline;
+     color: var(--primary-blue);
+}
+
+.link:hover {
+     color: #1E6AB1;
+}
+
 @media(max-width: 768px) {
      .childContainer {
           flex-direction: column;

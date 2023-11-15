@@ -7,7 +7,7 @@ function AreWeRight() {
         Are we <span>Right</span> for your business?
       </h2>
 
-      <div style={bodyParaContainer} >
+      <div style={bodyParaContainer}>
         <p>
           enstant.com is ideal for you if your company or organization orders
           business cards <span>frequently.</span>
@@ -35,10 +35,10 @@ export default AreWeRight;
 const parentContainer = {
   padding: "3% 0",
   backgroundColor: "white",
-  width: '100vw',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
+  width: "100vw",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
 };
 
 const bodyParaContainer = {
@@ -46,5 +46,5 @@ const bodyParaContainer = {
   display: "flex",
   flexDirection: "column",
   rowGap: "30px",
-  maxWidth: '1800px'
+  maxWidth: "1800px",
 };

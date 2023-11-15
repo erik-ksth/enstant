@@ -40,5 +40,4 @@ const container = {
 
 const logo = {
   width: "100%",
-  
-}
+};

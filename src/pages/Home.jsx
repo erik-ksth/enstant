@@ -10,6 +10,7 @@ import ClientsLogos from "../components/modules/HomePage/ClientsLogos";
 import Testimonials from "../components/modules/HomePage/Testimonials";
 import AppFooter from "../components/modules/PageLayout/submodules/AppFooter";
 import RemindingFooter from "../components/modules/PageLayout/submodules/RemindingFooter";
+import ScrollToTopButton from "../components/elements/ScrollToTop";
 
 function Home() {
   return (
@@ -23,6 +24,7 @@ function Home() {
       <Testimonials />
       <RemindingFooter />
       <AppFooter />
+      <ScrollToTopButton />
     </body>
   );
 }
