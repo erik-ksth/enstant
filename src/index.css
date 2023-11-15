@@ -109,6 +109,10 @@ p {
   background-color: #1E6AB1;
 }
 
+.alert > p {
+  text-align: center;
+}
+
 @media (max-width: 900px) {
   body {
     font-size: 130%;

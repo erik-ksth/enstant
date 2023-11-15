@@ -9,6 +9,7 @@ import Step4 from "../Step4";
 import Step5 from "../Step5";
 import Step6 from "../Step6";
 import "./style.css";
+import "../../../../index.css";
 
 const theme = createTheme({
   typography: {
@@ -94,9 +95,9 @@ export default function GettingInfo() {
 
   const sendEmail = () => {
     // Replace these values with your actual EmailJS values
-    const serviceId = "service_oygz4k4";
-    const templateId = "template_glhdopp";
-    const apiKey = "4elLZ1D6Fal_HMqxQ";
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateId = process.env.REACT_APP_EMAILJS_GETSTARTED_TEMPLATE_ID;
+    const apiKey = process.env.REACT_APP_EMAILJS_API_KEY;
 
     emailjs
       .send(serviceId, templateId, formData, apiKey)

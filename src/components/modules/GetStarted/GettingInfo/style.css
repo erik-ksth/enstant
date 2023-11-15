@@ -11,10 +11,6 @@
      margin-bottom: 5%;
 }
 
-.alert > p {
-     text-align: center;
-}
-
 .footer {
      display: flex;
      flex-direction: row;
