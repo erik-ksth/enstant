@@ -60,7 +60,7 @@ export default WhatDoYouWant;
 const listContainer = {
   display: "flex",
   flexWrap: "wrap",
-  alignItems: "flex-start",
+  alignItems: "start",
   justifyContent: "space-evenly",
   alignItems: "center",
   rowGap: "50px",
@@ -71,6 +71,7 @@ const listContainer = {
 const list = {
   listStyle: "none",
   display: "flex",
+  alignSelf: "stretch",
   flexDirection: "column",
   width: "25%",
   alignItems: "center",

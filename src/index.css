@@ -136,4 +136,9 @@ p {
     font-size: 130%;
     letter-spacing: -4px;
   }
+
+  .description {
+    line-height: 2;
+  }
+  
 }

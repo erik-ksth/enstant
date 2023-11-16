@@ -15,12 +15,14 @@ import ScrollToTopButton from "../components/elements/ScrollToTop";
 function Home() {
   return (
     <body>
-      <Navbar />
-      <HeroSection />
-      <WhatDoYouWant />
-      <WhatCanWeDo />
-      <AreWeRight />
-      <ClientsLogos />
+      <div style={{padding: "0 2%"}}>
+        <Navbar />
+        <HeroSection />
+        <WhatDoYouWant />
+        <WhatCanWeDo />
+        <AreWeRight />
+        <ClientsLogos />
+      </div>
       <Testimonials />
       <RemindingFooter />
       <AppFooter />

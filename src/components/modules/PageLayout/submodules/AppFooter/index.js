@@ -35,7 +35,7 @@ function AppFooter() {
         </a>
       </div>
 
-      <p style={{ color: "white" }}>Copyright © 1997-2023 Enstant.com</p>
+      <p style={{ color: "white" }}>Copyright © 1997-{new Date().getFullYear()} Enstant.com</p>
     </div>
   );
 }
