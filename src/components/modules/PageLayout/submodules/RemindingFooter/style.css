@@ -62,8 +62,8 @@
 
      .firstColumn > h2,
      .firstColumn > p,
-     .secondColumn > h2,
-     .secondColumn > p {
+     .secondColumn > div > h2,
+     .secondColumn > div > p {
           text-align: center;
      }
 
