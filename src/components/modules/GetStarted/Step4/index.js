@@ -1,6 +1,7 @@
 import React from "react";
 import "../GetStarted.css";
 import "../../../../index.css";
+
 function Step4({ formData, setFormData }) {
 
   const handleRadioChange = (fieldName, value) => {
@@ -18,7 +19,7 @@ function Step4({ formData, setFormData }) {
         About your <span>business cards</span>
       </h2>
       <p className="description">(Optional)</p>
-      <div className="inputContainer">
+      <div className="inputContainer step4Container">
         <div>
           <p>1. What is your business card paper specifications?</p>
 
@@ -153,16 +154,9 @@ function Step4({ formData, setFormData }) {
         <div>
           <ol start="3">
             <li>
-              If you don't know the specifications of the paper, <br />
-              you can upload your Company's Business Card Guideline, Artwork and
-              Fonts files below. <br />
-              Provid a vector graphic of your Company's logo in <span>
-                .ai
-              </span>{" "}
-              or <span>.eps</span> file format. <br />
-              Compress all files as either <span>.sit</span> or{" "}
-              <span>.zip</span> file before emailing as attachment. <br />
-              <input type="file" onChange={handleFileChange} />
+            <a href="mailto:orders@enstant.com"><span><u>Click here</u></span></a> to email your Company's Business Card Guideline, Artwork and Fonts files. <br/>
+            Provide a vector graphic of your Company's Logo in <span>.ai</span> or <span>.eps</span> file format. <br/>
+            Compress all files as either <span>.sit</span> or <span>.zip</span> file before emailing as attachment.
             </li>
           </ol>
         </div>

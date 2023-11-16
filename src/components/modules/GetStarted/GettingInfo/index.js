@@ -19,6 +19,7 @@ const theme = createTheme({
 });
 
 export default function GettingInfo() {
+  const [capVal, setCapVal] = useState();
   const [skipped, setSkipped] = React.useState(new Set());
   const [alertMessage, setAlertMessage] = useState("");
   const [page, setPage] = useState(0);
@@ -122,11 +123,16 @@ export default function GettingInfo() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleSubmit = () => {
-    setPage((currPage) => currPage + 1);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    sendEmail();
-    console.log("All Form Data: ", formData);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (capVal) {
+      setPage((currPage) => currPage + 1);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      sendEmail();
+      console.log("All Form Data: ", formData);
+    } else {
+      console.log("reCAPTCHA not completed.");
+    }
   };
 
   return (

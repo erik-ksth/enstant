@@ -54,7 +54,7 @@ function ReferralForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validateForm() && !capVal) {
+    if (validateForm() && capVal) {
       console.log("Referral Form Data: ", formData);
       sendEmail();
     } else {

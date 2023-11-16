@@ -1,10 +1,13 @@
 import React from "react";
 import "../GetStarted.css";
+import ReCAPTCHA from "react-google-recaptcha";
 import "../../../../index.css";
 
-function Step4({ formData, setFormData }) {
+function Step5({ formData, setFormData, capVal, setCapVal }) {
+  const recaptchaKey = process.env.REACT_APP_RECAPTCHA_KEY;
+
   return (
-    <>
+    <div style={container}>
       <h2>Questions or Comments</h2>
       <p className="description">(Optional)</p>
       <textarea
@@ -16,8 +19,18 @@ function Step4({ formData, setFormData }) {
           setFormData({ ...formData, comment: event.target.value })
         }
       ></textarea>
-    </>
+      <ReCAPTCHA sitekey={recaptchaKey} onChange={(val) => setCapVal(val)} />
+    </div>
   );
 }
 
-export default Step4;
+export default Step5;
+
+const container = {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  rowGap: "20px",
+  marginBottom: "50px"
+}

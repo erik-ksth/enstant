@@ -32,7 +32,7 @@
 }
 
 .firstColumn > h2,
-.secondColumn > h2 {
+.secondColumn > div > h2 {
      text-align: left;
 }
 
