@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import "../../../../index.css";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function ReferralForm() {
+  const recaptchaKey = process.env.REACT_APP_RECAPTCHA_KEY;
   const [alertMessage, setAlertMessage] = useState("");
+  const [capVal, setCapVal] = useState();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,7 +20,7 @@ function ReferralForm() {
 
   const sendEmail = () => {
     const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
-    const templateId = process.env.REACT_APP_EMAILJS_REFERRAL_TEMPLATE_ID;
+    const templateId = process.env.REACT_APP_EMAILJS_CONTACT_TEMPLATE_ID;
     const apiKey = process.env.REACT_APP_EMAILJS_API_KEY;
 
     emailjs
@@ -49,9 +52,10 @@ function ReferralForm() {
     return true;
   };
 
-  const handleSubmit = () => {
-    if (validateForm()) {
-      console.log("Contact Form Data: ", formData);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (validateForm() && !capVal) {
+      console.log("Referral Form Data: ", formData);
       sendEmail();
     } else {
       setAlertMessage("*Please complete the form.");
@@ -157,6 +161,7 @@ function ReferralForm() {
             }
           />
         </div>
+        <ReCAPTCHA sitekey={recaptchaKey} onChange={(val) => setCapVal(val)} />
         {alertMessage && (
           <div className="alert">
             <p>{alertMessage}</p>

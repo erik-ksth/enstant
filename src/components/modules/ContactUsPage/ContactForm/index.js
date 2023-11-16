@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import TextField from "@mui/material/TextField";
+import ReCAPTCHA from "react-google-recaptcha";
 import "./media.css";
+import "../../../../index.css";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
@@ -12,6 +15,9 @@ const theme = createTheme({
 });
 
 export default function ContactForm() {
+  const recaptchaKey = process.env.REACT_APP_RECAPTCHA_KEY;
+  const [capVal, setCapVal] = useState();
+  const [alertMessage, setAlertMessage] = useState("");
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -20,6 +26,23 @@ export default function ContactForm() {
     phone: "",
     question: "",
   });
+
+  const sendEmail = () => {
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateId = process.env.REACT_APP_EMAILJS_CONTACT_TEMPLATE_ID;
+    const apiKey = process.env.REACT_APP_EMAILJS_API_KEY;
+
+    emailjs
+      .send(serviceId, templateId, formData, apiKey)
+      .then((response) => {
+        console.log("Email sent successfully:", response);
+        window.location.reload();
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+        // Show an error message to the user
+      });
+  };
 
   const validateForm = () => {
     const requiredFields = ["firstName", "lastName", "email", "phone"];
@@ -31,9 +54,14 @@ export default function ContactForm() {
     return true;
   };
 
-  const handleSubmit = () => {
-    if (validateForm()) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm() && capVal) {
       console.log("Contact Form Data: ", formData);
+      sendEmail();
+    } else {
+      console.log("Form validation failed or reCAPTCHA not completed.");
+      setAlertMessage("*Form validation failed or reCAPTCHA not completed.");
     }
   };
 
@@ -113,9 +141,21 @@ export default function ContactForm() {
               setFormData({ ...formData, question: event.target.value })
             }
           />
-          <button type="submit" className="button" onClick={handleSubmit}>
-            Submit
-          </button>
+          <ReCAPTCHA
+            sitekey={recaptchaKey}
+            onChange={(val) => setCapVal(val)}
+          />
+          {alertMessage && (
+            <div className="alert">
+              <p>{alertMessage}</p>
+            </div>
+          )}
+          <input
+            type="button"
+            className="button"
+            onClick={handleSubmit}
+            value="Submit"
+          />
         </form>
         <div class="flex flex-col justify-start gap-y-5 px-5">
           <h3 class="text-left">
